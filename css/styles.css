@@ -1,119 +1,182 @@
-/* ================================= 
-  Base Layout Styles
-==================================== */
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    line-height: 1.6; 
-    color: #3a3a3a;
-    margin: 0;
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: whitesmoke;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 0;
-    padding-top: 20px;
-}
+/* NAVIGATION */
 
-h2 {
-    text-align: center;
-    margin: 3.5rem 0;
-}
-
-h4 {
-    text-align: center;
-    padding-top: 4rem;
-    margin-bottom: 0;
-}
-
-p {
-    text-align: center;
-    padding: 1rem .5rem 0 .5rem;
-    margin: .3rem .8rem 0rem .8rem;
-}
-
-.email {
-    margin-top: 0;
-    padding-top: .5rem;
-    padding-bottom: 4rem;
-}
-
-.project-title {
-    margin: 2rem auto 1rem;
-}
-
-/* --- Navigation ---*/
-
-.nav {
-    margin: 0 auto 3.5rem;
-    padding: 0;
-}
-
-.list-info {
-    padding: 10px;
-    margin: 8px 15px;
-    background-color: white;
+ul {
     list-style: none;
+    padding-left: 0
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    font-weight: 400;
+    padding: 25px;
+}
+
+h1, .top-nav {
     text-align: center;
-    font-weight: bold;
 }
 
-.profile-image {
-    width: 280px;
-    display: block;
-    margin: auto;
+.top-nav, .top-nav li {
+    width: 100%;
 }
 
-.profile-description {
-    text-align: center;
-    margin: 40px 30px 0 30px;
-    padding-bottom: 3.5rem;
-    font-size: 20px;
+h1 a, .top-nav a {
+    color: #000;
 }
 
-.project-text {
-    font-size: 20px;
-    text-align: center;
-    margin: 0 2rem 2rem;
+.top-nav {
+    margin-top: 30px;
 }
 
-.port-image {
-    height: 171px;
-    width: 358px;
-    display: block;
-    margin: auto;
+.top-nav li {
+    padding: 10px 0;
+    margin: 5px auto;
+    background-color: white;
+}
+
+.top-nav a {
+    text-transform: uppercase;
+}
+
+/* MAIN */
+
+    /* PROFILE */
+
+    .profile-description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .profile-description p {
+        padding: 25px;
+    }
+
+    /* PORTOFOLIO SECTION */
+
+    .portofolio {
+        background-color: aliceblue;
+    }
+
+    .port-title {
+        text-align: center;
+        padding: 20px;
+    }
+
+    img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .projects h3 {
+        text-align: center;
+    }
+
+    .projects p {
+        text-align: center;
+        padding: 20px 30px;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact, .skills {
+        text-align: center;
+    }
+    .contact p, .skills p {
+        padding: 25px;
+    }
+
+
+
+/* MEDIA QUERIES */
+
+/* NAVIGATION */
+
+@media (min-width: 768px) {
+
+    nav, .top-nav {
+        display: flex;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-nav li {
+        background-color: transparent;
+    }
+    .top-nav {
+        margin: 0 0 16px;
+    }
+
+    /* MAIN */
+
+    /* PROFILE */
+    .profile-description {
+        flex-direction: row;
+        justify-content: space-between; /* I cannot center vertically with justify-content */ 
+    }
+
+
+    .profile-description p {
+        order: -1;
+    }
+
+    .profile-image {
+        padding-right: 30px; /* I tried to center with padding-right */
+    }
+
+    /* PORTOFOLIO SECTION */
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* NAVIGATION */
+    nav {
+        flex-direction: row;  /* Student name takes two lines */
+        justify-content: space-around; /* I cannot justify-content: space-around*/
+    }
+
+    nav .name {
+        margin-right: auto;
+    }
+
+    .item {
+        flex-basis: 33.333%;
+    }
+    
 }
 
 
 
 
-/* ---- Layout Containers ---- */
 
-.main-header {
-    background-color: RGB(248, 249, 250);
-}
-
-.main-footer {
-    background-color: RGB(248, 249, 250);
-}
-
-.footer {
-    width: 95%;
-    margin: auto;
-    background-color: RGB(248, 249, 250);
-    border-bottom: 1px solid lightgrey;
-}
-
-.last-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0 2rem;
-}
-
-/* ================================= 
-  Media Queries
-==================================== */
 
