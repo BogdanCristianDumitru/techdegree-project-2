@@ -4,87 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bogdan's Portofolio</title>
+    <title>Student's Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
 
-    <header class="main-header">
-        <h1>
-            Student Name
-        </h1>
-        <nav class="main-navigation">
-            <ul class="nav">
-                <li class="list-info">HOME</li>
-                <li class="list-info">PORTOFOLIO</li>
-                <li class="list-info">CONTACT</li>
+    <body>
+
+        <nav> 
+            <h1 class="name"><a href="#">Student Name</a></h1>
+            <ul class="top-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="destription">   
-            <img class="profile-image" src="images/responsive-layout-profile.png" alt="Profile Image">
-            <p class="profile-description">
-           Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!  
-            </p>
-        </div> 
-    </header>
+        
 
-    <main>
-        <h2>PORTOFOLIO</h2>
-
-        <div class="work-examples">
-            <section class="work-item">
-                <img class="port-image" src="images/portfolio-1.png" alt="A window surrounded by blue space.">
-                <h2 class="project-title">Marketing Page</h2>
-                <p class="project-text">This project shows the front page of a marketing website meant for a specific business I am interested in.</p>
+        <main>
+            <section class="profile-description">
+                <img class="profile-image" src="images/responsive-layout-profile.png" alt="Cartoon character's professional headshot">
+                <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use.</p>
             </section>
 
-            <section class="work-item">
-                <img class="port-image" src="images/portfolio-2.png" alt="A search engine.">
-                <h2 class="project-title">Search Page</h2>
-                <p class="project-text">This project searches through a specific database to find information that the user is trying to look up.</p>
-            </section>
-            
-            <section class="work-item">
-                <img class="port-image" src="images/portfolio-3.png" alt="A travel app.">
-                <h2 class="project-title">Travel App</h2>
-                <p class="project-text">This project compares travel time based on different transportation methods and tells you the best one.</p>
-            </section>
+        <section class="portofolio">
+            <h2 class="port-title">Portofolio</h2>
 
-            <section class="work-item">
-                <img class="port-image" src="images/portfolio-4.png" alt="A map of favorite spots.">
-                <h2 class="project-title">Map of Favorite Spots</h2>
-                <p class="project-text">This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
-            </section>
+            <div class="projects">
+                <div class="example-1 item">
+                    <img src="images/portfolio-1.png" alt="A marketing page.">
+                    <h3>Marketing Page</h3>
+                    <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+                </div>
+                <div class="example-2 item">
+                    <img src="images/portfolio-2.png" alt="A search page.">
+                    <h3>Search Page</h3>
+                    <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+                </div>
 
-            <section class="work-item">
-                <img class="port-image" src="images/portfolio-5.png" alt="A photo gallery.">
-                <h2 class="project-title">Photo Gallery</h2>
-                <p class="project-text">This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
-            </section>
+                <div class="example-3 item">
+                    <img src="images/portfolio-3.png" alt="A travel app page.">
+                    <h3>Travel App</h3>
+                    <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+                </div>
+                <div class="example-4 item">
+                    <img src="images/portfolio-4.png" alt="A map of favorite spots page.">
+                    <h3>Map of favorite spots</h3>
+                    <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
+                </div>
+                <div class="example-5 item">
+                    <img src="images/portfolio-5.png" alt="A photo gallery page.">
+                    <h3>Photo Gallery</h3>
+                    <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+                </div>
+                <div class="example-6 item">
+                    <img src="images/portfolio-6.png" alt="A calculator page.">
+                    <h3>Calculator</h3>
+                    <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="work-item">
-                <img class="port-image" src="images/portfolio-6.png" alt="A calculator.">
-                <h2 class="project-title">Calculator</h2>
-                <p class="project-text">Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
-            </section>
-        </div>
-    </main>
+        <section class="skills">
+            <h3>Skills</h3>
+            <p>I am a professional web developer with extensive knowledge of HTML, CSS, JavaScript, React and NOde.js.</p>
+        </section>
 
-    <div class="main-footer">
-    <footer class="footer">
-        <h4 class="text-footer">
-            CONTACT
-        </h4>
-        <p>
-            If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
-        </p>
-        <p>Phone &nbsp; &nbsp;<b>+1 (111) 555-1234 </b></p>
-        <p class="email">Email &nbsp; &nbsp;<b>email@yoursite.com</b></p>
-    </footer>
-        <div class="last-info">
-            <p class="st-name"><b>Student name</b></p>
-            <p class="back-button"><b>BACK TO TOP</b></p>
-        </div>
-    </div>
-</body>
-</html> 
+        <section class="contact">
+            <h3>Contact</h3>
+            <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+            <p>Phone &nbsp; &nbsp; +1 (111) 555 - 1234</p>
+            <p>Email &nbsp; &nbsp; email@yoursite.com</p>
+        </section>
+        </main>
+
+        <footer> 
+
+        </footer>
+    
+    </body>
