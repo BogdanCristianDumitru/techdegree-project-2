@@ -8,29 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
     <body>
-
         <nav> 
-            <h1 class="name"><a href="#">Student Name</a></h1>
+            <h1 class="name" id="top"><a href="#">Student Name</a></h1>
             <ul class="top-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li id="home-top"><a href="#home">Home</a></li>
+                    <li><a href="#portofolio">Portfolio</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         
-
         <main>
             <section class="profile-description">
                 <img class="profile-image" src="images/responsive-layout-profile.png" alt="Cartoon character's professional headshot">
-                <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use.</p>
+                <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
             </section>
 
-        <section class="portofolio">
+        <section class="portofolio" id="portofolio">
             <h2 class="port-title">Portofolio</h2>
 
             <div class="projects">
@@ -60,29 +60,36 @@
                     <h3>Photo Gallery</h3>
                     <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
                 </div>
-                <div class="example-6 item">
+                <div id="last-example" class="example-6 item">
                     <img src="images/portfolio-6.png" alt="A calculator page.">
                     <h3>Calculator</h3>
                     <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
                 </div>
             </div>
         </section>
-
-        <section class="skills">
+ 
+        <section class="skills" id="skills">
             <h3>Skills</h3>
             <p>I am a professional web developer with extensive knowledge of HTML, CSS, JavaScript, React and NOde.js.</p>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h3>Contact</h3>
             <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
-            <p>Phone &nbsp; &nbsp; +1 (111) 555 - 1234</p>
-            <p>Email &nbsp; &nbsp; email@yoursite.com</p>
+            <p id="phone">Phone &nbsp; &nbsp; +1 (111) 555 - 1234</p> <!-- I tried to use the strong and bold tags to bold the phone number and email but it's not working; I think this is because it is overriden by the font family applied. -->
+            <p id="email">Email &nbsp; &nbsp; email@yoursite.com</p>
         </section>
+
         </main>
 
         <footer> 
-
-        </footer>
-    
+            <h2>Student Name</h2>
+            <ul class="footer-nav">
+                <li class="top"><a href="#top">Back to Top</a></li>
+                <li class="hide" id="home"><a href="#home-top">Home</a></li>
+                <li class="hide"><a href="#portofolio">Portofolio</a></li>
+                <li class="hide"><a href="#skills">Skills</a></li>
+                <li class="hide"><a href="#contact">Contact</a></li>
+            </ul>
+        </footer> 
     </body>
