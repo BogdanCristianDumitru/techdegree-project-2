@@ -4,116 +4,171 @@
 
 body {
     font-family: 'Roboto Flex', sans-serif;
-    background-color: whitesmoke;
+    background-color: #f5f5dc;
     max-width: 1024px;
     margin: 0 auto;
 }
-
-/* NAVIGATION */
-
+nav h1,
+.top-nav li,
+.port-title,
+.skills h3,
+.contact h3,
+footer h2,
+footer li {
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 1px;
+}
 ul {
     list-style: none;
     padding-left: 0
 
 }
-
 a {
     text-decoration: none;
     color: black;
 }
+a:hover {
+    color: #5f9ea0;
+  }
+ nav a:hover {
+    color: #5f9ea0;
+ } 
+
+/* NAVIGATION */
 
 nav {
     font-weight: 400;
     padding: 25px;
 }
-
 h1, .top-nav {
     text-align: center;
 }
-
 .top-nav, .top-nav li {
     width: 100%;
 }
-
 h1 a, .top-nav a {
     color: #000;
 }
-
 .top-nav {
     margin-top: 30px;
 }
-
 .top-nav li {
-    padding: 10px 0;
+    padding: 15px 0;
     margin: 5px auto;
     background-color: white;
 }
-
 .top-nav a {
     text-transform: uppercase;
 }
 
 /* MAIN */
 
-    /* PROFILE */
+    /* PROFILE SECTION */
 
     .profile-description {
-        display: flex;
-        flex-direction: column;
+        padding-top: 18px;
     }
-
     .profile-image {
         width: 70%;
         margin: 0 auto;
     }
     .profile-description p {
         padding: 25px;
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 1.7rem;
     }
 
     /* PORTOFOLIO SECTION */
 
     .portofolio {
         background-color: aliceblue;
+        padding-bottom: 40px;
     }
-
+    .portofolio h2 {
+        margin-top: 0;
+    }
     .port-title {
         text-align: center;
-        padding: 20px;
+        padding: 60px 20px 50px;
     }
-
     img {
         width: 90%;
         display: block;
         margin: 0 auto;
     }
-
     .projects h3 {
         text-align: center;
+        padding-top: 25px
     }
-
     .projects p {
         text-align: center;
-        padding: 20px 30px;
+        padding: 5px 30px 20px;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
     }
 
-    /* CONTACT SECTION */
+
+    /* SKILLS AND CONTACT SECTIONS */
 
     .contact, .skills {
         text-align: center;
     }
-    .contact p, .skills p {
+    .skills {
+        margin-top: 46px;
+    }
+    .skills p {
         padding: 25px;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+    .contact p {
+        padding: 25px 25px 0;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+    .contact #phone {
+        padding-bottom: 0;
+    }
+    .contact #email {
+        padding: 0 25px 50px;
     }
 
+    /* FOOTER */
 
+    footer, .footer-nav {
+            display: flex;
+    }
+    footer {
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-top: 1.5px solid slategrey;
+    }
+    .hide {
+        display: none;
+    }
+    .top {
+    padding-right: 15px;
+    }
+    footer h2 {
+        padding-left: 15px;
+    }
+    footer h2, footer ul {
+        margin-top: 40px;
+    }
+    footer li {
+        text-transform: uppercase;
+    }
+    footer h2, 
+    footer li {
+        font-size: 1rem;
+    }
 
 /* MEDIA QUERIES */
 
-/* NAVIGATION */
-
 @media (min-width: 768px) {
 
-    nav, .top-nav {
+    nav, .top-nav  {
         display: flex;
     }
     nav {
@@ -126,51 +181,65 @@ h1 a, .top-nav a {
     .top-nav {
         margin: 0 0 16px;
     }
-
-    /* MAIN */
-
-    /* PROFILE */
     .profile-description {
+        display: flex;
         flex-direction: row;
-        justify-content: space-between; /* I cannot center vertically with justify-content */ 
+        padding-bottom: 50px;
     }
-
-
     .profile-description p {
         order: -1;
     }
-
-    .profile-image {
-        padding-right: 30px; /* I tried to center with padding-right */
+    .profile-description p {
+        padding: 0 25px 0 30px;
+        margin-top: 0;
+        font-size: 20px;
     }
-
-    /* PORTOFOLIO SECTION */
-
+    .profile-image {
+        padding-right: 30px;
+        width: 330px;
+    }
+    .portofolio {
+        padding-bottom: 40px;
+    }
     .projects {
         display: flex;
         flex-wrap: wrap;
     }
-
     .item {
-        flex-grow: 1;
-        flex-basis: 50%;
+        flex: 1 50%;
     }
+    .top {
+        display: none;
+    }
+    .hide {
+        display: inline-block;
+        margin-left: 20px;
+        padding-right: 20px;
+    }
+    footer h2 {
+        padding-left: 20px;
+    } 
 }
 
 @media (min-width: 1024px) {
 
-    /* NAVIGATION */
     nav {
         flex-direction: row;  /* Student name takes two lines */
-        justify-content: space-around; /* I cannot justify-content: space-around*/
+        justify-content: space-around; /* I cannot use justify-content: space-around, and then nav .name { margin-right: auto} to space them properly*/
     }
-
     nav .name {
         margin-right: auto;
     }
-
+    .profile-description {
+        padding: 18px 35px 50px;
+    }
     .item {
         flex-basis: 33.333%;
+    }
+    .portofolio {
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 60px;
     }
     
 }
