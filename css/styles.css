@@ -43,7 +43,8 @@ nav {
 h1, .top-nav {
     text-align: center;
 }
-.top-nav, .top-nav li {
+.top-nav, 
+.top-nav li {
     width: 100%;
 }
 h1 a, .top-nav a {
@@ -99,7 +100,8 @@ h1 a, .top-nav a {
     }
     .projects h3 {
         text-align: center;
-        padding-top: 25px
+        padding-top: 25px;
+        font-size: 1.4rem;
     }
     .projects p {
         text-align: center;
@@ -117,6 +119,9 @@ h1 a, .top-nav a {
     .skills {
         margin-top: 46px;
     }
+    #skills h3, #contact h3 {
+        font-size: 1.4rem;
+    }
     .skills p {
         padding: 25px;
         font-size: 1.3rem;
@@ -129,9 +134,11 @@ h1 a, .top-nav a {
     }
     .contact #phone {
         padding-bottom: 0;
+        color: #9E4624;
     }
     .contact #email {
         padding: 0 25px 50px;
+        color: #9E4624;
     }
 
     /* FOOTER */
@@ -181,6 +188,13 @@ h1 a, .top-nav a {
     .top-nav {
         margin: 0 0 16px;
     }
+    .top-nav, 
+    .top-nav li {
+        width: auto;
+    }
+    .top-nav li {
+        margin: 0 10px;
+      }
     .profile-description {
         display: flex;
         flex-direction: row;
@@ -224,11 +238,10 @@ h1 a, .top-nav a {
 @media (min-width: 1024px) {
 
     nav {
-        flex-direction: row;  /* Student name takes two lines */
-        justify-content: space-around; /* I cannot use justify-content: space-around, and then nav .name { margin-right: auto} to space them properly*/
+        flex-direction: row;  
     }
     nav .name {
-        margin-right: auto;
+        margin: 0 auto 20px 0;
     }
     .profile-description {
         padding: 18px 35px 50px;
@@ -241,7 +254,6 @@ h1 a, .top-nav a {
         margin: 0 auto;
         padding-bottom: 60px;
     }
-    
 }
 
 
